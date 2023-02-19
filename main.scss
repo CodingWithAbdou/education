@@ -1,0 +1,20 @@
+@use "./scss/base/rest";
+@use "./scss/layout/global";
+@use "./scss/layout/grid";
+
+@use "./scss/sass-utils/mixins";
+@use "./scss/components/cover";
+@use "./scss/components/button";
+
+@use "./scss/layout/navigation";
+
+@use "./scss/layout/landingPage";
+@use "./scss/layout/features";
+@use "./scss/layout/courses";
+@use "./scss/pages/home";
+@use "./scss/pages/about";
+@use "./scss/pages/inner.course";
+@use "./scss/pages/blog";
+@use "./scss/pages/contact";
+
+@use "./scss/layout/footer";

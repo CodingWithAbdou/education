@@ -1,0 +1,132 @@
+@use "../sass-utils/helpers";
+@use "../sass-utils/variables" as *;
+
+#inner__courses {
+  background-color: $section-color;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    #section__left {
+      width: calc(70% - 1rem);
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+      .image__inner img {
+        border-radius: 0.6rem;
+      }
+      .inner__box {
+        position: relative;
+        h3 {
+          width: 80%;
+          color: darken($dark-color, 10%);
+          padding: 1rem 0;
+          font-size: 1.4rem;
+        }
+        .inner__stars i {
+          color: $seconde-color;
+        }
+        .descrip {
+          width: 80%;
+          padding: 0.5rem 0;
+        }
+        .inner__price {
+          position: absolute;
+          right: 0;
+          top: 1rem;
+          background-color: darken($section-color, 10%);
+          color: $dark-color;
+          cursor: pointer;
+          font: {
+            size: 1.2rem;
+            weight: 700;
+          }
+          padding: 1rem;
+          border-radius: 0.2rem;
+          transition: all $transtion-sm ease;
+          &:hover {
+            color: $white-color;
+            background-color: $dark-color;
+          }
+        }
+      }
+      .insructor {
+        @extend %spaceBetween;
+        padding: 1rem 0 2rem;
+        border-bottom: 1px solid darken($section-color, 10%);
+        img {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+        }
+        .info {
+          flex: 1;
+          text-align: start;
+          padding: 0 1rem;
+        }
+      }
+      .overview {
+        padding: 1rem 0 2rem;
+        border-bottom: 1px solid darken($section-color, 10%);
+        h3 {
+          margin: 1rem 0;
+        }
+        p {
+          text-align: justify;
+          color: rgba($dark-color, 0.5);
+        }
+      }
+      .what__learn {
+        padding: 1rem 0;
+        ul li {
+          padding: 1rem 0;
+          color: darken($dark-color, 1%);
+          &::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "\f058";
+            margin: 1rem 0.2rem;
+            color: $dark-color;
+          }
+        }
+      }
+    }
+    #section__right {
+      width: calc(30% - 1rem);
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+      height: fit-content;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(darken($dark-color, 10%), 0.1);
+      & > h3 {
+        color: darken($dark-color, 10%);
+        @media (max-width: 991px) {
+          text-align: center;
+        }
+      }
+      & > a {
+        padding: 1rem 0;
+        display: block;
+        text-align: start;
+        i {
+          color: darken($dark-color, 20%);
+        }
+        & > span {
+          padding: 0 1rem;
+        }
+        &:hover {
+          i {
+            color: $dark-color;
+          }
+          span {
+            color: $dark-color;
+          }
+        }
+      }
+      & > div {
+        text-align: center;
+      }
+    }
+  }
+}

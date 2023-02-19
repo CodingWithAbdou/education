@@ -1,0 +1,28 @@
+@use "./variables" as *;
+
+@mixin button($colorText: $white-color, $colorBackgrounf: $dark-color) {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.75rem 2rem;
+  border-radius: 0.4rem;
+  background-color: $colorBackgrounf;
+  color: $colorText;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all ease $transtion-sm;
+  &:hover {
+    background-color: $colorText;
+    color: $colorBackgrounf;
+  }
+}
+
+@mixin cover($cover) {
+  background-image: linear-gradient(rgba(#090536, 0.3), rgba(#05042e, 0.7)),
+    $cover;
+  background-size: cover;
+  background-position: center;
+}
+// @mixin linearGradient {
+//   background: linear-gradient(132deg, $primary-color, $primary-color-variant);
+//   color: $white-color;
+// }

@@ -1,0 +1,9 @@
+@use "../sass-utils/variables" as *;
+.container {
+  width: $container-md;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 992px) {
+    width: $container-lg;
+  }
+}

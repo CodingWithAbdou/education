@@ -1,0 +1,103 @@
+@use "../sass-utils/helpers";
+@use "../sass-utils/variables" as *;
+
+#contact__container {
+  .container {
+    @extend %spaceBetween;
+    flex-wrap: wrap;
+    #contact__info {
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+      & > p {
+        color: rgba($dark-color, 0.4);
+        padding: 0.5rem 0 2rem;
+        border-bottom: 1px solid rgba($dark-color, 0.4);
+      }
+      .box {
+        padding: 1rem 0;
+        h3 {
+          margin: 0.5rem 0;
+        }
+        .box__info {
+          @extend %spaceBetween;
+          gap: 1rem;
+          i {
+            color: $dark-color;
+          }
+          & > div {
+            flex: 1;
+            span {
+              display: block;
+            }
+          }
+          &:last-of-type {
+            justify-content: start;
+            .socail {
+              border: 1px solid $dark-color;
+              padding: 0.6rem 0.8rem;
+              transition: all $transtion-sm ease;
+              i {
+                font-size: 1.2rem;
+              }
+              &:hover {
+                background-color: $dark-color;
+                i {
+                  color: $white-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #contact__forms {
+      align-self: stretch;
+      background-color: darken($section-color, 1%);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+      & > h2 {
+        color: $dark-color;
+      }
+      & > p {
+        color: darken($dark-color, 2%);
+        padding: 1rem 0;
+      }
+      form {
+        .box {
+          padding: 0.5rem 0;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          input,
+          textarea {
+            padding: 1rem;
+            flex: 1;
+          }
+          textarea {
+            min-height: 10rem;
+            resize: none;
+          }
+        }
+        .btn {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// map
+
+#map {
+  width: 100%;
+  height: 70vh;
+  iframe {
+    width: inherit;
+    height: inherit;
+    // height: 100% // if you need padding bottom;
+  }
+}

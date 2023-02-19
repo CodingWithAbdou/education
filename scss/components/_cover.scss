@@ -1,0 +1,10 @@
+@use "../sass-utils/mixins" as *;
+.cover-one {
+  @include cover(url("../images/back.jpg"));
+}
+.cover-two {
+  @include cover(url("../images/signup.jpg"));
+}
+.cover-three {
+  @include cover(url("../images/back1.jpg"));
+}

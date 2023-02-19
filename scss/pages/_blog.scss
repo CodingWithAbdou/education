@@ -1,0 +1,73 @@
+@use "../sass-utils/helpers";
+@use "../sass-utils/variables" as *;
+
+#blog__container {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 991px) {
+      flex-direction: column-reverse;
+    }
+    #blog__boxes {
+      width: 60%;
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+      article {
+        padding: 1rem 0 2rem;
+        .image__box img {
+          border-radius: 0.5rem;
+        }
+        .text__box {
+          h3 {
+            margin: 0.7rem 0;
+          }
+          p {
+            color: rgba($dark-color, 0.4);
+            padding-bottom: 0.5rem;
+            text-align: justify;
+            // for Javascript (hide More paragraph)
+            &.more {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    #blog__categories {
+      width: 30%;
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+      h2 {
+        padding-bottom: 1rem;
+      }
+      a {
+        display: block;
+        padding: 1rem;
+        border-top: 1px solid rgba($dark-color, 0.4);
+        color: rgba($dark-color, 0.8);
+        position: relative;
+        transition: all $transtion-sm ease;
+
+        &::before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: $dark-color;
+          z-index: -1;
+          transition: all $transtion-sm ease;
+        }
+        &:hover {
+          color: $white-color;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

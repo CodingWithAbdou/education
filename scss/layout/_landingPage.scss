@@ -1,0 +1,35 @@
+@use "../sass-utils/helpers" as *;
+@use "../sass-utils/variables" as *;
+
+// Page Landing
+#landing {
+  .container {
+    height: inherit;
+    @extend %centering;
+    flex-direction: column;
+    color: $white-color;
+    h1 {
+      @media (max-width: 600px) {
+        font-size: 1.5rem;
+      }
+      color: inherit;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    p {
+      @media (max-width: 600px) {
+        font-size: 0.9rem;
+      }
+      @media (max-width: 991px) {
+        width: 90%;
+      }
+      width: 65%;
+      text-align: center;
+      line-height: 1.8;
+    }
+    #landing__links {
+      padding-top: 2rem;
+    }
+  }
+}

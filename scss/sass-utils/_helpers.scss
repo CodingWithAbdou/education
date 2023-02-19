@@ -1,0 +1,16 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+//  pleacholders :
+
+%centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%spaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+// classes :

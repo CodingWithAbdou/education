@@ -1,0 +1,9 @@
+@use "../sass-utils/mixins" as *;
+@use "../sass-utils/variables" as *;
+
+.btn {
+  @include button($white-color, $dark-color);
+}
+.btn-yellow {
+  @include button($white-color, $seconde-color);
+}
